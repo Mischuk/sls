@@ -1,0 +1,142 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Корзина
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Корзина
+    .page-heading
+      h2 Корзина
+    .m_cart
+      table
+        tr
+          th
+          th Наименование
+          th Цена
+          th Количество
+          th Сумма
+          th
+        tr
+          td
+            .preview: img(src="images/content/media/1.png" alt="")
+          td
+            .details
+              .title: a(href="#") Душевая кабина Jacuzzi Frame
+              .desc Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.
+          td
+            .price
+              .old 15 000
+              .current 12 450
+          td
+            .total-items
+              input(type='button' value='–' class='qtyminus' field='quantity')
+              input(type='text' name='quantity' value='1' class='qty')
+              input(type='button' value='+' class='qtyplus' field='quantity')
+          td
+            .total-sum
+              i Итого:
+              span 12 450
+          td
+            .remove: button(class="remove-cart-item" type="button")
+        tr
+          td
+            .preview: img(src="images/content/media/1.png" alt="")
+          td
+            .details
+              .title: a(href="#") Душевая кабина Jacuzzi Frame
+              .desc Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.
+          td
+            .price
+              .old 15 000
+              .current 12 450
+          td
+            .total-items
+              input(type='button' value='–' class='qtyminus' field='quantity')
+              input(type='text' name='quantity' value='1' class='qty')
+              input(type='button' value='+' class='qtyplus' field='quantity')
+          td
+            .total-sum
+              i Итого:
+              span 12 450
+          td
+            .remove: button(class="remove-cart-item" type="button")
+        tr
+          td
+            .preview: img(src="images/content/media/1.png" alt="")
+          td
+            .details
+              .title: a(href="#") Душевая кабина Jacuzzi Frame
+              .desc Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое.
+          td
+            .price
+              .old 15 000
+              .current 12 450
+          td
+            .total-items
+              input(type='button' value='–' class='qtyminus' field='quantity')
+              input(type='text' name='quantity' value='1' class='qty')
+              input(type='button' value='+' class='qtyplus' field='quantity')
+          td
+            .total-sum
+              i Итого:
+              span 12 450
+          td
+            .remove: button(class="remove-cart-item" type="button")
+      .cart-sum-result
+        .promocode
+          .label Код купона<br>на скидку
+          form
+            input(type="text" placeholder="")
+            button(class="submit" type="submit") Применить
+        .total
+          .label Итого:
+          .sum: span 24 900
+      .cart-final
+        .row
+          .continue: a(href="#") Продолжить покупки
+          .final-submit: a(href="#") Оформить заказ
+        .row
+          a(class="backward" href="#") Вернуться к выбору товара
+    .m_pluses
+      .column
+        .image: img(src="images/icon-pluses-1.png" alt="")
+        .title Ассортимент
+        .desc Всегда в наличии более 17 000 наименований строительных материалов.
+      .column
+        .image: img(src="images/icon-pluses-2.png" alt="")
+        .title Доставка
+        .desc Мы доставляем стройматериалы в течение 3 часов.
+      .column
+        .image: img(src="images/icon-pluses-3.png" alt="")
+        .title Гарантия качества <br>всех товаров
+        .desc Многоуровневая система управления качеством
+      .column
+        .image: img(src="images/icon-pluses-4.png" alt="")
+        .title Возврат товара
+        .desc Остались излишки или не подходит товар? Верните его нам в течение 120 дней!
+    .m_top-items.bottom-viewed
+      .wrapper
+        .top-items-nav
+          a(class="viewed current" href="#") Ранее вы смотрели
+          a(class="top" href="#") Лучшие предложения
+        .top-items-loader
+          span
+          span
+          span
+        .top-items-content
+          // Добавить класс к m_item для иконки
+          // .m_item.icon-top  - Иконка "Хит продаж"
+          // .m_item.icon-sale - Иконка "Скидка"
+          // .m_item.icon-new  - Иконка "Новинка"
+          .top-items-carousel-viewed.top-item-carousels.bottom.enabled
+            - for (var x = 0; x < 15; x++)
+              .slide
+                include ../modules/item/m_item
+          .top-items-carousel-top.top-item-carousels.bottom.disabled
+            - for (var x = 0; x < 15; x++)
+              .slide
+                include ../modules/item/m_item

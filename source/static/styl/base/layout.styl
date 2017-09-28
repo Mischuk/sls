@@ -1,0 +1,282 @@
+$gutter = 2%
+$wrapper = 1200px
+$footer = 350px
+$footerMobile = 300px
+
+html
+  position relative
+  min-height 100%
+body
+  font-family 'Roboto', sans-serif
+  font-size 16px
+  line-height 1.2
+  margin-bottom $footerMobile + 20
+  background #fafafa
+  @media XS
+    margin-bottom 290px
+  @media SM
+    margin-bottom $footer + 20
+footer
+  height $footerMobile
+  @media XS
+    height 260px
+  @media SM
+    height $footer
+.wrapper
+  clearfix()
+  position relative
+  max-width 1200px
+  height 100%
+  padding-left 15px
+  padding-right 15px
+  margin-left auto
+  margin-right auto
+main
+  display block
+  position relative
+  max-width 1200px
+  padding 0 15px
+  margin 0 auto
+.main
+  clearfix()
+  padding 15px 0
+  .sidebar
+    @media SM
+      float left
+      width 300px
+      padding-right 30px
+      & + .content
+        padding-left 300px
+      &.right
+        float right
+        padding-right 0
+        padding-left 30px
+        & + .content
+          padding-left 0
+          padding-right 300px
+  .content
+    @media XS
+      width 100%
+  &.page-index
+    @media LG
+      padding-top 30px
+      padding-bottom 60px
+    .m_top-items
+      @media LG
+        margin-top 60px
+      .wrapper
+        padding-left 0
+        padding-right 0
+    .m_pluses
+      @media LG
+        padding-top 50px
+        padding-bottom 45px
+    .sidebar
+      @media SM
+        width 100%
+        float none
+        padding-right 0
+        & + .content
+          padding-left 0
+        &.right
+          float none
+          padding-right 0
+          padding-left 0
+          & + .content
+            padding-left 0
+            padding-right 0
+      @media MD
+        float left
+        width 32%
+        padding-right 30px
+        & + .content
+          float right
+          width 68%
+      @media LG
+        width 27%
+        & + .content
+          width 73%
+
+// Grid layout
+.row
+  clearfix()
+  .col
+    float left
+    width 100%
+    margin ($gutter/2) 0
+    @media XS
+      &.xs1
+        width 100%
+        margin-left 0
+        margin-right 0
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left 0
+          margin-right 0
+      &.xs2
+        width ((100% - $gutter)/2)
+        margin-left $gutter
+        &:nth-child(2n+1)
+          margin-left 0
+      &.xs3
+        width ((100% - $gutter*2)/3)
+        margin-left $gutter
+        &:nth-child(3n+1)
+          margin-left 0
+      &.xs4
+        width ((100% - $gutter*3)/4)
+        margin-left $gutter
+        &:nth-child(4n+1)
+          margin-left 0
+      &.xs6
+        width ((100% - $gutter*5)/6)
+        margin-left $gutter
+        &:nth-child(6n+1)
+          margin-left 0
+    @media SM
+      &.sm1
+        width 100%
+        margin-left 0
+        margin-right 0
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left 0
+          margin-right 0
+      &.sm2
+        width ((100% - $gutter)/2)
+        margin-left $gutter
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(2n+1)
+          margin-left 0
+      &.sm3
+        width ((100% - $gutter*2)/3)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(3n+1)
+          margin-left 0
+      &.sm4
+        width ((100% - $gutter*3)/4)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(4n+1)
+          margin-left 0
+      &.sm6
+        width ((100% - $gutter*5)/6)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1)
+          margin-left $gutter
+        &:nth-child(6n+1)
+          margin-left 0
+    @media MD
+      &.md1
+        width 100%
+        margin-left 0
+        margin-right 0
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left 0
+          margin-right 0
+      &.md2
+        width ((100% - $gutter)/2)
+        margin-left $gutter
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(2n+1)
+          margin-left 0
+      &.md3
+        width ((100% - $gutter*2)/3)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(3n+1)
+          margin-left 0
+      &.md4
+        width ((100% - $gutter*3)/4)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(4n+1)
+          margin-left 0
+      &.md6
+        width ((100% - $gutter*5)/6)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1)
+          margin-left $gutter
+        &:nth-child(6n+1)
+          margin-left 0
+    @media LG
+      &.lg1
+        width 100%
+        margin-left 0
+        margin-right 0
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left 0
+          margin-right 0
+      &.lg2
+        width ((100% - $gutter)/2)
+        margin-left $gutter
+        &:nth-child(3n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(2n+1)
+          margin-left 0
+      &.lg3
+        width ((100% - $gutter*2)/3)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(4n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(3n+1)
+          margin-left 0
+      &.lg4
+        width ((100% - $gutter*3)/4)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(6n+1)
+          margin-left $gutter
+        &:nth-child(4n+1)
+          margin-left 0
+      &.lg6
+        width ((100% - $gutter*5)/6)
+        margin-left $gutter
+        &:nth-child(2n+1),
+        &:nth-child(3n+1),
+        &:nth-child(4n+1)
+          margin-left $gutter
+        &:nth-child(6n+1)
+          margin-left 0
+
+
+
+

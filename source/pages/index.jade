@@ -1,0 +1,249 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Главная
+
+block data
+  include ../static/content/_home.jade
+
+block content
+  main
+    .main.page-index
+      aside.sidebar
+        .m_lead-catalog-items
+          .mobile-action
+            a(href="#") Каталог товаров
+          .title Каталог товаров
+          ul
+            li: a(href="#") Общестроительные материалы
+            li: a(href="#") Сухие строительные смеси и гидроизоляция
+            li: a(href="#") Тепло- и звукоизоляция
+            li: a(href="#") Материалы для сухого строительства
+            li: a(href="#") Древесно-плитные материалы
+            li: a(href="#") Лесопиломатериалы
+            li: a(href="#") Кровля, сайдинг, водосточные системы
+            li: a(href="#") Лакокрасочные материалы
+            li: a(href="#") Пены, клеи, герметики
+            li: a(href="#") Кафельная плитка, затирки
+            li: a(href="#") Финишная отделка стен и потолков
+            li: a(href="#") Напольные покрытия
+            li: a(href="#") Двери, окна, скобяные изделия
+            li: a(href="#") Инженерная сантехника
+            li: a(href="#") Отопительное и насосное оборудование
+            li: a(href="#") Санфаянс, смесители
+            li: a(href="#") Электротехническое оборудование
+            li: a(href="#") Кабель и аксессуары, системы обогрева
+            li: a(href="#") Вентиляция
+            li: a(href="#") Электробензоинструмент и комплектующие
+            li: a(href="#") Ручной инструмент, спецодежда, хозтовары
+            li: a(href="#") Крепеж
+        .m_lead-review.hot-water
+          .image(style="background-image: url('images/lead-review-1.png')")
+          .text
+            h2 Горячая вода <br>круглый год
+            p Подберите водонагреватель
+            .action
+              a(href="#") Подробнее <i class="icon-details"></i>
+        .m_lead-review.no-fixed
+          .text
+            h2 Фильтры для воды
+            img(src="images/lead-review-2.png" alt="")
+            .action
+              a(class="border" href="#") Подробнее <i class="icon-details"></i>
+        .m_rss
+          .title <b>Подпишитесь <br>на рассылку</b> <span>и будьте в курсе всех наших акций!</span>
+          form
+            .form-row
+              input(type="text" placeholder="Имя")
+            .form-row
+              input(type="text" placeholder="E-mail")
+            .form-row
+              button(type="submit") Подписаться <i class="icon-details"></i>
+      section.content
+        .m_lead-carousel
+          .lead-carousel
+            .slide
+              .image(style="background-image: url('images/content/carousel/1.jpg')")
+              .text
+                .vertical-outer
+                  .vertical-inner
+                    h1 Комплектом <span class="red">дешевле</span>
+                    p Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!»
+                    .action: a(href="#") Подробнее <i class="icon-details"></i>
+            .slide
+              .image(style="background-image: url('images/content/carousel/1.jpg')")
+              .text
+                .vertical-outer
+                  .vertical-inner
+                    h1 Скидки на все товары до <span class="red">-20%</span>
+                    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                    .action: a(href="#") Подробнее <i class="icon-details"></i>
+        .m_pluses
+          .wrapper
+            .column
+              .image: img(src="images/icon-pluses-1.png" alt="")
+              .title Ассортимент
+              .desc Всегда в наличии более 17 000 наименований строительных материалов.
+            .column
+              .image: img(src="images/icon-pluses-2.png" alt="")
+              .title Доставка
+              .desc Мы доставляем стройматериалы в течение 3 часов.
+            .column
+              .image: img(src="images/icon-pluses-3.png" alt="")
+              .title Гарантия качества <br>всех товаров
+              .desc Многоуровневая система управления качеством
+        .m_lead-categories
+          .wrapper
+            .list
+              .item
+                a(href="#" style="background-image: url(images/content/lead-categories/1.jpg)")
+                  .title: span Гипсокартон
+              .item
+                a(href="#" style="background-image: url(images/content/lead-categories/2.jpg)")
+                  .title: span Электротовары
+              .item
+                a(href="#" style="background-image: url(images/content/lead-categories/3.jpg)")
+                  .title: span Напольные покрытия
+
+        .m_top-items
+          .wrapper
+            .top-items-nav
+              a(class="top current" href="#") Хит продаж
+              a(class="new" href="#") Новинка
+              a(class="sale" href="#") Акция
+              a(class="recommend" href="#") Советуем
+            .top-items-loader
+              span
+              span
+              span
+            .top-items-content
+              // Добавить класс к m_item для иконки
+              // .m_item.icon-top  - Иконка "Хит продаж"
+              // .m_item.icon-sale - Иконка "Скидка"
+              // .m_item.icon-new  - Иконка "Новинка"
+              // Хиты продаж
+              .top-items-carousel-top.top-item-carousels.enabled
+                - for (var x = 0; x < 15; x++)
+                  .slide
+                    include ../modules/item/m_item
+              // Новинки
+              .top-items-carousel-new.top-item-carousels.disabled
+                - for (var x = 0; x < 15; x++)
+                  .slide
+                    include ../modules/item/m_item
+              // Акции и скидки
+              .top-items-carousel-sale.top-item-carousels.disabled
+                - for (var x = 0; x < 15; x++)
+                  .slide
+                    include ../modules/item/m_item
+              // Советуем
+              .top-items-carousel-recommend.top-item-carousels.disabled
+                - for (var x = 0; x < 15; x++)
+                  .slide
+                    include ../modules/item/m_item
+  .m_brands
+    .wrapper
+      h2 Бренды
+      .brands-carousel
+        .slide: .image: a(href="#"): img(src="images/content/brands/1.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/2.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/3.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/4.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/5.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/6.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/5.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/3.png" alt="")
+        .slide: .image: a(href="#"): img(src="images/content/brands/2.png" alt="")
+  .m_lead-sales
+    .wrapper
+      h2 Акции и распродажи <span class="details"><a href="#">Смотреть все</a></span>
+
+      .lead-sales-carousel
+        .slide
+          .m_item-media
+            .image: a(href="#" style="background-image: url('images/content/media/1.png')")
+            .details
+              .post-date 02 июня 2016
+              .title: a(href="#") Заголовок для новости
+              .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!».
+        .slide
+          .m_item-media
+            .image: a(href="#" style="background-image: url('images/content/media/2.png')")
+            .details
+              .post-date 02 июня 2016
+              .title: a(href="#") Заголовок для новости
+              .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!».
+        .slide
+          .m_item-media
+            .image: a(href="#" style="background-image: url('images/content/media/3.png')")
+            .details
+              .post-date 02 июня 2016
+              .title: a(href="#") Заголовок для новости
+              .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!».
+        .slide
+          .m_item-media
+            .image: a(href="#" style="background-image: url('images/content/media/4.png')")
+            .details
+              .post-date 02 июня 2016
+              .title: a(href="#") Заголовок для новости
+              .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!».
+        .slide
+          .m_item-media
+            .image: a(href="#" style="background-image: url('images/content/media/1.png')")
+            .details
+              .post-date 02 июня 2016
+              .title: a(href="#") Заголовок для новости
+              .desc Дорогие друзья, сегодня мы спешим вам сообщить о запуске новой акции - «АКЦИЯ - Комплектом дешевле!».
+  .m_lead-contacts
+    .wrapper
+      h2 Точки выдачи на карте
+      .columns
+        .info
+          .vertical-outer
+            .vertical-inner
+              .locate г. Москва
+              .address Адрес: ул. Воронцовская, 20
+              .tel Телефон: 8 (495) 505-49-04
+              .action: a(class="call-popup" href="#popup-callback") Заказать звонок
+        .map
+          script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+          script.
+            ymaps.ready(function () {
+                var myMap = new ymaps.Map('map', {
+                        center: [55.737061, 37.657143],
+                        zoom: 15,
+                        controls: ['zoomControl']
+                    }, {
+                        searchControlProvider: 'yandex#search'
+                    }),
+                    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+                        hintContent: 'Собственный значок метки',
+                        balloonContent: 'Это красивая метка'
+                    }, {
+                        // Опции.
+                        // Необходимо указать данный тип макета.
+                        iconLayout: 'default#image',
+                        // Своё изображение иконки метки.
+                        iconImageHref: 'images/marker.png',
+                        // Размеры метки.
+                        iconImageSize: [31, 40],
+                        // Смещение левого верхнего угла иконки относительно
+                        // её "ножки" (точки привязки).
+                        iconImageOffset: [-20, -40]
+                    });
+                myMap.geoObjects.add(myPlacemark);
+                myMap.behaviors.disable('scrollZoom');
+            });
+          #map
+  .m_lead-about
+    .wrapper
+      .columns
+        .column
+          .image(style="background-image: url('images/content/about.png')")
+        .column
+          article
+            h2 О компании
+            p.lead-paragraph: i Сайт, торгующий товарами в Интернете. Позволяет пользователям сформировать заказ на покупку, выбрать способ оплаты и доставки заказа в сети Интернет.
+            p Выбрав необходимые товары или услуги, пользователь обычно имеет возможность тут же на сайте выбрать метод оплаты и доставки.
+            p Основное отличие Интернет-магазина от традиционного — в типе торговой площадки. Обычному магазину нужен торговый зал, витрины, ценники, а также продавцы, кассиры и опытные консультанты, у онлайн-магазина же вся инфраструктура реализована программно.
+            .action: a(href="#") Подробнее <i class="icon-details"></i>

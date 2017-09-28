@@ -1,0 +1,59 @@
+.m_lead-review
+  display none
+  @media MD
+    display block
+    margin-top 30px
+    box-shadow 1px 1px 4px rgba(0,0,0,.3)
+    border-radius $radius
+    padding 20px
+    height 250px
+    &.no-fixed
+      height auto
+      text-align center
+      background #fff
+    &.hot-water
+      background url("../images/lead-review-1.png") no-repeat 0 0
+      background-size cover
+      color #fff
+      padding-right 100px
+      padding-top 30px
+  .text
+    h2
+      font-size 18px
+      line-height 1.4
+      display block
+      text-transform uppercase
+      futuris()
+      padding-bottom 5px
+    p
+      font-size 15px
+      line-height 24px
+      margin-top 5px
+    .action
+      a
+        anim()
+        display inline-block
+        border 1px solid #fff
+        border-radius $radius
+        background #fff
+        color #333
+        height 40px
+        line-height 38px
+        padding 0 20px
+        margin-top 15px
+        box-shadow none
+        &.border
+          border-color $yellow
+          box-shadow: inset 1px 2px 2px rgba(249,166,26,0.3), 2px 3px 2px -2px rgba(249,166,26,0.3);
+        &:hover
+          background $yellow
+          border-color $yellow
+
+        i
+          display inline-block
+          vertical-align middle
+          background: url('../images/sprite.png') no-repeat -150px -25px;
+          width: 12px;
+          height: 12px;
+          margin-top -2px
+          margin-left 2px

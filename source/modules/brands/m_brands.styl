@@ -1,0 +1,87 @@
+.m_brands
+  padding-left 15px
+  padding-right 15px
+  .wrapper
+    background #fff
+    box-shadow 1px 1px 4px rgba(0,0,0,0.3)
+    padding-left 5px
+    padding-right 5px
+    padding-top 20px
+    border-radius $radius
+    padding-bottom 15px
+    @media screen and (min-width: 993px)
+      padding-top 30px
+      padding-bottom 25px
+    @media LG
+      max-width 1170px
+  .slick-slider
+    position static
+  .slick-arrow
+    position absolute
+    top 20px
+    width 16px
+    height 16px
+    background none
+    border none
+    text-indent -9999px
+    sprite()
+    @media screen and (min-width: 769px)
+      top 50%
+      margin-top 12px
+    &.slick-disabled
+      opacity .25
+      cursor default
+    &.slick-next
+      right 10px
+      background-position -250px -250px
+      @media screen and (min-width: 769px)
+        right 15px
+      &:hover
+        background-position -250px -300px
+    &.slick-prev
+      background-position -200px -250px
+      right 40px
+      @media screen and (min-width: 769px)
+        right auto
+        left 15px
+      &:hover
+        background-position -200px -300px
+  h2
+    font-size 24px
+    margin-top -5px
+    futuris()
+    text-transform uppercase
+    padding-right 70px
+    padding-left 10px
+    text-align left
+    @media screen and (min-width: 769px)
+      padding-left 40px
+    @media screen and (min-width: 993px)
+      padding-left 50px
+  .brands-carousel
+    margin-top 15px
+    @media screen and (min-width: 769px)
+      padding-left 30px
+      padding-right 30px
+    @media screen and (min-width: 993px)
+      padding-left 40px
+      padding-right 40px
+    .slide
+      height 130px
+      padding 10px
+      .image
+        width 100%
+        height 100%
+        line-height 110px
+        background #fff
+        border 1px solid #e3e9ea
+        text-align center
+        overflow hidden
+        border-radius $radius
+        &:hover
+          border-color $red
+        img
+          display inline-block
+          vertical-align middle
+          max-width 90%
+          max-height 100%

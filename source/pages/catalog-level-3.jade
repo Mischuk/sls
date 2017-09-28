@@ -1,0 +1,274 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Каталог (Уровень 3)
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Каталог
+        li: a(href="#") Раздел каталога
+        li: a(href="#") Подраздел каталога
+    .page-heading
+      h2 Кухонные мойки
+    .main
+      aside.sidebar
+        .m_sidebar-filters
+          form
+            .dropdown-aside.open
+              .dropdown-aside-header: a(href="#") Цена
+              .box
+                .price-inputs
+                  input(type="text" placeholder="От")#sidebar-input-start
+                  input(type="text" placeholder="До")#sidebar-input-finish
+                .price-range
+                  #sidebar-slider-format
+            .dropdown-aside.open
+              .dropdown-aside-header: a(href="#") Производитель
+              .box
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-produced")
+                    span.icon
+                    span.label Производитель №1
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-produced")
+                    span.icon
+                    span.label Производитель №2
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-produced")
+                    span.icon
+                    span.label Производитель №3
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-produced")
+                    span.icon
+                    span.label Производитель №4
+            .dropdown-aside
+              .dropdown-aside-header: a(href="#") Минимальная толщина
+              .box
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 1 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,2 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,5 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,1 мм
+            .dropdown-aside
+              .dropdown-aside-header: a(href="#") Максимальная толщина
+              .box
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 1 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,2 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,5 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,1 мм
+            .dropdown-aside
+              .dropdown-aside-header: a(href="#") Фасовка
+              .box
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 1 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,2 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,5 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,1 мм
+            .dropdown-aside
+              .dropdown-aside-header: a(href="#") Тип работ
+              .box
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 1 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,2 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,5 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,1 мм
+            .dropdown-aside
+              .dropdown-aside-header: a(href="#") Состав
+              .box
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 1 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,2 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,5 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,1 мм
+            .dropdown-aside
+              .dropdown-aside-header: a(href="#") Тип помещения
+              .box
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 1 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,2 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,5 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,1 мм
+            .dropdown-aside
+              .dropdown-aside-header: a(href="#") Морозостойкость
+              .box
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 1 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,2 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,5 мм
+                .checkbox
+                  label
+                    input(type="checkbox" name="filters-material")
+                    span.icon
+                    span.label 0,1 мм
+            .filter-options
+              button(class="submit" type="submit") Применить
+              button(class="reset" type="reset"): span Сбросить
+      section.content
+        .m_catalog-items
+          .header
+            .sort
+              .label Сортировать:
+              a(class="sort-by-price" href="#")
+                span По цене
+                i.arrow
+              a(class="sort-by-rate" href="#")
+                span По популярности
+                i.arrow
+            .display
+              a(class="display-grid current" href="#")
+              a(class="display-row" href="#")
+          .list
+            - for (var x = 0; x < 15; x++)
+              .item
+                include ../modules/item/m_item
+          .m_paginations
+            ul
+              li: button(class="prev" type="button"): i
+              li: a(href="#") 1
+              li: a(href="#") 2
+              li: a(href="#") 3
+              li: a(href="#") 4
+              li.current: a(href="#") 5
+              li: a(href="#") 6
+              li: a(href="#") 7
+              li: a(href="#") 8
+              li: a(href="#") 9
+              li: a(href="#") 10
+              li: button(class="next" type="button"): i
+
+
+    .m_seo-text
+      h4 Пример SEO текста
+      p Проснувшись однажды утром после беспокойного сна, Грегор Замза обнаружил, что он у себя в постели превратился в страшное насекомое. Лежа на панцирнотвердой спине, он видел, стоило ему приподнять голову, свой коричневый, выпуклый, разделенный дугообразными чешуйками живот, на верхушке которого еле держалось готовое вот-вот окончательно сползти одеяло.
+      p Его многочисленные, убого тонкие по сравнению с остальным телом ножки беспомощно копошились у него перед глазами. «Что со мной случилось?» – подумал он. Это не было сном. Его комната, настоящая, разве что слишком маленькая, но обычная комната, мирно покоилась в своих четырех хорошо знакомых стенах. Над столом, где были разложены распакованные образцы сукон – Замза был коммивояжером, – висел портрет, который он недавно вырезал из иллюстрированного журнала и вставил в красивую золоченую рамку.
+    .m_top-items.bottom-viewed
+      .wrapper
+        .top-items-nav
+          a(class="viewed current" href="#") Ранее вы смотрели
+          a(class="top" href="#") Лучшие предложения
+        .top-items-loader
+          span
+          span
+          span
+        .top-items-content
+          // Добавить класс к m_item для иконки
+          // .m_item.icon-top  - Иконка "Хит продаж"
+          // .m_item.icon-sale - Иконка "Скидка"
+          // .m_item.icon-new  - Иконка "Новинка"
+          .top-items-carousel-viewed.top-item-carousels.bottom.enabled
+            - for (var x = 0; x < 15; x++)
+              .slide
+                include ../modules/item/m_item
+          .top-items-carousel-top.top-item-carousels.bottom.disabled
+            - for (var x = 0; x < 15; x++)
+              .slide
+                include ../modules/item/m_item

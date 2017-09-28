@@ -1,0 +1,48 @@
+.m_paginations
+  text-align center
+  margin-top 15px
+  @media LG
+    padding-bottom 20px
+  ul
+    cursor default
+  li
+    display inline-block
+    vertical-align middle
+    button
+      background none
+      border none
+      padding 0 4px
+      i
+        display inline-block
+        vertical-align middle
+        width: 12px;
+        height: 12px;
+        sprite()
+        opacity .8
+        margin-top -2px
+        background-position -150px -25px
+      &.prev
+        i
+          transform rotate(180deg)
+        &:hover
+          i
+            opacity 1
+      &.next
+        &:hover
+          i
+            opacity 1
+
+    a
+      display inline-block
+      vertical-align middle
+      line-height 1
+      color #555555
+      width 30px
+      height 30px
+      line-height 30px
+      border-radius 50%
+    &.current a,
+    &:hover a
+        color #fff
+        background $red
+        text-decoration none

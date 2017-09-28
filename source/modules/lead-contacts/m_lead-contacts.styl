@@ -1,0 +1,68 @@
+.m_lead-contacts
+  h2
+    font-size 24px
+    margin-top -5px
+    futuris()
+    text-transform uppercase
+    margin-bottom 20px
+  .info
+    background #fff
+    color #222
+    padding 20px
+    position relative
+    z-index 10
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    border-radius $radius
+    margin-bottom 15px
+    @media XS
+      float right
+      width 50%
+      height 300px
+      padding 0 15px
+      margin-bottom 0
+    @media SM
+      width 240px
+      height 235px
+      padding 15px
+      float none
+      position absolute
+      right 30px
+      top 50%
+      margin-top -105px
+    @media LG
+      width 340px
+      padding 40px
+      right 50px
+    .locate
+      font-size 18px
+      line-height 1
+      text-transform uppercase
+      futuris()
+    .address, .tel
+      font-size 14px
+      margin-top 10px
+    .action
+      margin-top 15px
+      a
+        anim()
+        border-radius $radius
+        background $yellow
+        padding 10px 15px
+        color #222
+        display inline-block
+        vertical-align middle
+        &:hover
+          background $red
+          color #fff
+  .map
+    height 300px
+    width 100%
+    @media XS
+      float left
+      width 50%
+    @media SM
+      width 100%
+      height 400px
+    #map
+      width 100%
+      height 100%

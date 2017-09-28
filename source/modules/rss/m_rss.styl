@@ -1,0 +1,58 @@
+.m_rss
+  display none
+  @media MD
+    display block
+    margin-top 30px
+    box-shadow 1px 1px 4px rgba(0,0,0,.3)
+    border-radius $radius
+    padding 20px
+    background #fff
+  .title
+    b
+      futuris()
+      display block
+      text-transform uppercase
+      font-size 18px
+      line-height 26px
+      padding-left 60px
+      background url("../images/rss.png") no-repeat 0 0
+    span
+      roman()
+      text-transform none
+      display block
+      font-size 13px
+      margin-top 5px
+      border-bottom 1px solid #dcdcdc
+      padding-bottom 20px
+      margin-bottom 10px
+  form
+    .form-row
+      margin-top 10px
+    input
+      border none
+      border-bottom 1px solid #dcdcdc
+      width 100%
+      padding 10px 0
+      &:focus
+        border-color $yellow
+    button
+      anim()
+      width 100%
+      border 1px solid $yellow
+      border-radius $radius
+      background #fff
+      color #333
+      height 50px
+      line-height 48px
+      margin-top 15px
+      box-shadow: inset 1px 2px 2px rgba(249,166,26,0.3), 2px 3px 2px -2px rgba(249,166,26,0.3);
+      &:hover
+        background $yellow
+      i
+        display inline-block
+        vertical-align middle
+        background: url('../images/sprite.png') no-repeat -150px -25px;
+        width: 12px;
+        height: 12px;
+        margin-top -2px
+        margin-left 2px

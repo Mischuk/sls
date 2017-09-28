@@ -1,0 +1,93 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Отложенные товары
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Личный кабинет
+    .page-heading
+      h2 Отложенные товары
+    .main
+      section.content
+        .m_cabinet
+          .cabinet-nav
+            a(class="btn btn-green" href="#") Список заказов
+            a(class="btn btn-green" href="#") Мои данные
+            a(class="btn btn-green current" href="#") Отложенные товары
+          .orders-list.deffered
+            table
+              tr
+                th товары
+                th цена
+                th статус
+                th
+                th
+              tr
+                td
+                  .list
+                    .item
+                      .image: a(href="#"): img(src="images/content/item/1.png" alt="")
+                      .title
+                        a(href="#") Название товара
+                td
+                  .sum 11 000 руб.
+                td
+                  .status: span.yes В наличии
+                td
+                  .count
+                    .total-items
+                      button(type='button' value='–' class='qtyminus' field='quantity-3')
+                      input(type='text' name='quantity-3' value='1' class='qty' disabled)
+                      button(type='button' value='+' class='qtyplus' field='quantity-3')
+                td
+                  .buy
+                    a(class="btn btn-red" href="#") Купить
+              tr
+                td
+                  .list
+                    .item
+                      .image: a(href="#"): img(src="images/content/item/1.png" alt="")
+                      .title
+                        a(href="#") Название товара
+                td: .sum 11 000 руб.
+                td: .status: span.no Отсутствует
+                td
+                td
+              tr
+                td
+                  .list
+                    .item
+                      .image: a(href="#"): img(src="images/content/item/1.png" alt="")
+                      .title
+                        a(href="#") Название товара
+                td: .sum 11 000 руб.
+                td: .status: span.no Отсутствует
+                td
+                td
+              tr
+                td
+                  .list
+                    .item
+                      .image: a(href="#"): img(src="images/content/item/1.png" alt="")
+                      .title
+                        a(href="#") Название товара
+                td: .sum 11 000 руб.
+                td: .status: span.no Отсутствует
+                td
+                td
+              tr
+                td
+                  .list
+                    .item
+                      .image: a(href="#"): img(src="images/content/item/1.png" alt="")
+                      .title
+                        a(href="#") Название товара
+                td: .sum 11 000 руб.
+                td: .status: span.no Отсутствует
+                td
+                td
+

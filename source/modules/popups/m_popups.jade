@@ -1,0 +1,154 @@
+// Popup: login
+div(id="popup-login" class="zoom-anim-dialog mfp-hide popup")
+  h2 Вход с логином и паролем
+  form
+    .form-row
+      input(type="email" placeholder="Ваш email" autocomplete="off")
+    .form-row
+      input(type="password" placeholder="Пароль" autocomplete="off")
+    .form-row
+      button(type="submit") Войти
+    .form-row
+      .socials
+        span Войти через профиль в соцсетях
+        ul
+          li: a(class="vk" href="#")
+          li: a(class="fb" href="#")
+          li: a(class="tt" href="#")
+// Popup: callback
+div(id="popup-callback" class="zoom-anim-dialog mfp-hide popup")
+  h2 Заказать звонок
+  p Мы свяжемся с вами в удобное для Вас время
+  form
+    .form-row
+      input(type="text" placeholder="Как Вас зовут?" autocomplete="off")
+    .form-row
+      input(type="tel" placeholder="Ваш телефон" autocomplete="off")
+    .form-row
+      textarea(placeholder="Комментарий к заказу")
+    .form-row
+      .conditions
+        label
+          input(type="checkbox" name="cond-1" checked value="1")
+          i.icon
+          i.label Я принимаю условия <a href="#">пользовательского соглашения</a> и даю свое согласие группе компаний «СЛС» на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных <a href="#">политикой конфиденциальности</a>.
+    .form-row
+      button(type="submit") Отправить
+// Popup: question
+div(id="popup-question" class="zoom-anim-dialog mfp-hide popup")
+  h2 Задать вопрос
+  p Мы свяжемся с вами в удобное для Вас время
+  form
+    .form-row
+      input(type="text" placeholder="Как Вас зовут?" autocomplete="off")
+    .form-row
+      input(type="tel" placeholder="Ваш телефон" autocomplete="off")
+    .form-row
+      input(type="email" placeholder="Email" autocomplete="off")
+    .form-row
+      textarea(placeholder="Вопрос")
+    .form-row
+      .conditions
+        label
+          input(type="checkbox" name="cond-1" checked value="1")
+          i.icon
+          i.label Я принимаю условия <a href="#">пользовательского соглашения</a> и даю свое согласие группе компаний «СЛС» на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных <a href="#">политикой конфиденциальности</a>.
+    .form-row
+      button(type="submit") Отправить заявку
+// Popup: fast buy
+div(id="popup-fast" class="zoom-anim-dialog mfp-hide popup")
+  .m_header-cart
+    h2 Купить в 1 клик
+    .total-items
+      .item
+        .image: a(href="#"): img(src="images/content/cart/1.png" alt="")
+        .desc
+          .title: a(href="#") Душевая кабина Jacuzzi Frame
+          .details
+            .amt <span class="sum-value">6 299.10</span> x 1 шт.
+            .sum 6 299.10
+    .total-sum
+      span.label Общая сумма:
+      span.sum 12 598.20
+  form
+    .form-row
+      input(type="text" placeholder="Как Вас зовут?" autocomplete="off")
+    .form-row
+      input(type="tel" placeholder="Ваш телефон" autocomplete="off")
+    .form-row
+      textarea(placeholder="Комментарий к заказу")
+    .form-row
+      .conditions
+        label
+          input(type="checkbox" name="cond-1" checked value="1")
+          i.icon
+          i.label Я принимаю условия <a href="#">пользовательского соглашения</a> и даю свое согласие группе компаний «СЛС» на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных <a href="#">политикой конфиденциальности</a>.
+    .form-row
+      button(type="submit") Купить в 1 клик
+// Popup: success
+a(id="success" class="call-popup" href="#popup-success")
+div(id="popup-success" class="zoom-anim-dialog mfp-hide popup")
+  h2 Наш менеджер свяжется с Вами в ближайшее время
+
+
+div(id="modal-catalog" class="zoom-anim-dialog mfp-hide popup")
+  .m_menu-dropdown
+    .column
+      .category
+        .title: a(href="#") Кухонные мойки
+        ul
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+      .category
+        .title: a(href="#") Сместители
+        ul
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+    .column
+      .category
+        .title: a(href="#") Ванны
+        ul
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+          li: a(href="#") Подкатегория
+      .category
+        .title: a(href="#") Душевые кабины
+      .category
+        .title: a(href="#") Унитазы
+      .category
+        .title: a(href="#") Доп. категория
+    .column
+      .recommended
+        .title Рекомендуем
+        .m_item
+          .image
+            a(href="#"): img(src="images/content/item/1.png" alt="")
+          .details
+            .title: a(href="#") Душевая кабина Jacuzzi Frame
+            .articul
+              .label Артикул:
+              .value 9448-2721254
+            .produced
+              .label Производитель:
+              .value Jacuzzi
+            .available В наличии
+            .not-available Нет в наличии
+            .price
+              .old 15 000
+              .current 12 450
+            .action
+              a(href="#") Купить

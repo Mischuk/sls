@@ -1,0 +1,117 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Карточка товара
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Каталог
+        li: a(href="#") Раздел каталога
+    .page-heading
+      h2 Виброшумоизоляция Пенотерм НПП ЛЭ 6 мм
+      .backward: a(href="#") Вернуться в каталог
+    .main
+      section.content
+        .m_card
+          .top
+            .card-gallery
+              .card-info
+                .new: span Новинка
+                .popular: span Хит продаж
+                .sales: span Скидка
+              img(src="images/content/item/2.png", alt="")
+            .card-details
+              .card-info
+                .row
+                  .prices
+                    .current 12 450
+                    .old 15 000
+                  .compare: a(href="#") Сравнить
+                .row
+                  .status: .available В наличии
+                  .articul
+                    .label Артикул:
+                    .value 944-28210
+                  .produced
+                    .label Производитель:
+                    .value: a(href="#") Jacuzzi
+              .card-options
+                .total-items
+                  input(type='button' value='–' class='qtyminus' field='cardcounter')
+                  input(type='text' name='cardcounter' value='1' class='qty')
+                  input(type='button' value='+' class='qtyplus' field='cardcounter')
+                .add-to-cart: a(href="#") Купить
+                .short-buy: a(class="call-popup" href="#popup-fast") Купить в 1 клик
+              .card-desc
+                p(lorem="5")
+              .card-social-share
+                | Поделиться в соц. сетях:
+                ul
+                  li: a(class="vk" href="#")
+                  li: a(class="facebook" href="#")
+                  li: a(class="twitter" href="#")
+          .m_pluses
+            .column
+              .image: img(src="images/icon-pluses-1.png" alt="")
+              .title Ассортимент
+              .desc Всегда в наличии более 17 000 наименований строительных материалов.
+            .column
+              .image: img(src="images/icon-pluses-2.png" alt="")
+              .title Доставка
+              .desc Мы доставляем стройматериалы в течение 3 часов.
+            .column
+              .image: img(src="images/icon-pluses-3.png" alt="")
+              .title Гарантия качества <br>всех товаров
+              .desc Многоуровневая система управления качеством
+            .column
+              .image: img(src="images/icon-pluses-4.png" alt="")
+              .title Возврат товара
+              .desc Остались излишки или не подходит товар? Верните его нам в течение 120 дней!
+          .card-description
+            h2 Описание товара
+            p Florentina Липси-600 - компактная кухонная мойка прямоугольной формы, выполненная из искусственного камня, отличающаяся вместительной чашей и наличием специального отверстия под установку аксессуаров (дозатора для мыла или других моющих средств). К достоинствам модели относится практичность, высокое качество изготовления, отличная глубина, элегантный внешний вид, простота ухода. Ещё одна причина купить мойку Флорентина Липси 600 - привлекательная стоимость в сравнении с многими европейскими аналогами.
+            p Безупречные материалы изготовления
+            p Все мойки для кухни Florentina изготавливаются из искусственного композитного гранита. Как и натуральному камню данному материала свойственна повышенная долговечность, стойкость к различным воздействиям - тепловым, химическим, механическим, прочность, гигиеничность. Имеющиеся в составе композитного гранита добавки способствуют сохранению исходного внешнего облика на протяжении всего периода эксплуатации, а уход в большинстве случаев ограничивается протиркой губкой или тряпкой.
+            p Ещё одно неоспоримое преимущество гранитной мойки Florentina Липси-600 - безупречный внешний вид, который позволяет изделию легко вписаться в любой современный интерьер, став его важнейшим украшением и основным функциональным элементом.
+            p Ещё несколько особенностей модели Липси 600.
+          .card-contact-form
+            .desc Вы можете задать любой интересующий вас вопрос по товару. <br>Наши квалифицированные специалисты обязательно помогут.
+            .action: a(class="call-popup" href="#popup-question"): span Задать вопрос
+    .m_top-items.bottom-viewed.similar-items
+      .wrapper
+        .top-items-nav
+          a(class="viewed current" href="#") Похожие товары
+        .top-items-content
+          // Добавить класс к m_item для иконки
+          // .m_item.icon-top  - Иконка "Хит продаж"
+          // .m_item.icon-sale - Иконка "Скидка"
+          // .m_item.icon-new  - Иконка "Новинка"
+          .top-items-carousel-viewed.top-item-carousels.bottom.enabled
+            - for (var x = 0; x < 15; x++)
+              .slide
+                include ../modules/item/m_item
+    .m_top-items.bottom-viewed
+      .wrapper
+        .top-items-nav
+          a(class="viewed current" href="#") Ранее вы смотрели
+          a(class="top" href="#") Лучшие предложения
+        .top-items-loader
+          span
+          span
+          span
+        .top-items-content
+          // Добавить класс к m_item для иконки
+          // .m_item.icon-top  - Иконка "Хит продаж"
+          // .m_item.icon-sale - Иконка "Скидка"
+          // .m_item.icon-new  - Иконка "Новинка"
+          .top-items-carousel-viewed.top-item-carousels.bottom.enabled
+            - for (var x = 0; x < 15; x++)
+              .slide
+                include ../modules/item/m_item
+          .top-items-carousel-top.top-item-carousels.bottom.disabled
+            - for (var x = 0; x < 15; x++)
+              .slide
+                include ../modules/item/m_item

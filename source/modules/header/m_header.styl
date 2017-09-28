@@ -1,0 +1,507 @@
+.m_header
+  position relative
+  z-index 1000
+  background #fff
+  .top-header,
+  .bottom-header
+    position relative
+    z-index 1000
+  .top-header
+    background #333
+    height 50px
+    color #fff
+    @media screen and (max-width: 767px)
+      position absolute
+      bottom 0
+      right 0
+      height 125px
+      width 60%
+      background none
+      z-index 2000
+      display table
+      padding-top 21px
+      .wrapper
+        display table-cell
+        vertical-align middle
+    .menu
+      display none
+      float left
+      @media SM
+        display block
+      ul
+        cursor default
+        li
+          display inline-block
+          vertical-align middle
+          line-height 50px
+          & + li
+            position relative
+            padding-left 10px
+            @media MD
+              padding-left 20px
+            &:after
+              @media MD
+                content ''
+                width 1px
+                height 14px
+                position absolute
+                left 9px
+                top 50%
+                margin-top -7px
+                background rgba(255,255,255,.3)
+          a
+            anim()
+            display inline-block
+            vertical-align middle
+            color #fff
+            text-transform uppercase
+            font-size 12px
+            line-height 1
+            border-bottom 1px solid rgba(255,255,255,.3)
+            &:hover
+              color $yellow
+              border-color transparent
+    .tel
+      float left
+      position relative
+      padding-left 30px
+      line-height 42px
+      @media screen and (max-width: 767px)
+        position absolute
+        right 15px
+        top 0
+      @media SM
+        float right
+        padding-right 40px
+      @media MD
+        line-height 50px
+      &:after
+        content ''
+        sprite()
+        width 22px
+        height 23px
+        background-position -99px 0
+        margin-top -10px
+        position absolute
+        left 0
+        top 50%
+        @media screen and (min-width: 480px) and (max-width: 767px)
+          margin-top -13px
+      a
+        color #333
+        cursor default
+        bold()
+        font-size 16px
+        @media screen and (min-width: 480px) and (max-width: 767px)
+          font-size 24px
+        @media MD
+          color #fff
+          font-size 17px
+    .callback
+      float right
+      height 100%
+      background #fff
+      line-height 42px
+      @media screen and (max-width: 767px)
+        line-height 32px
+        height 32px
+      @media screen and (min-width: 480px) and (max-width: 767px)
+        margin-top 10px
+      @media SM
+        background none
+        line-height 50px
+      a
+        anim()
+        display block
+        height 100%
+        width auto
+        background #fff
+        border 1px solid $yellow
+        border-radius $radius
+        color #333
+        padding 0 10px
+        box-shadow inset 1px 2px 2px rgba(249, 166, 26, .3), 2px 3px 2px -2px rgba(249, 166, 26, .3)
+        @media SM
+          box-shadow none
+          background none
+          line-height 30px
+          height 30px
+          color #fff
+          border 1px solid #ccc
+          display inline-block
+          vertical-align middle
+          font-size 14px
+        &:hover
+          background $yellow
+          @media SM
+            border-color $yellow
+            color #333
+  .bottom-header
+    background #fff
+    border-bottom 1px solid #eeefef
+    @media screen and (max-width: 767px)
+      padding-top 50px
+      height 175px
+    @media SM
+      height 120px
+    .wrapper
+      &:after,
+      &:before
+        display none
+    .logo
+      position absolute
+      left 15px
+      top 50%
+      width 79.5px
+      height 49px
+      margin-top -24.5px
+      padding-top 0
+      @media screen and (min-width: 380px) and (max-width: 767px)
+        width 159px
+        height 98px
+        margin-top -49px
+      @media SM
+        width 159px
+        height 98px
+        margin-top -49px
+        z-index 1
+      a
+        display block
+        size(100%)
+        background url("../images/logo.png") no-repeat 0 0
+        background-size contain
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2)
+          background-image url('../images/logo@2x.png')
+          background-size contain
+    .menu-catalog
+      display none
+      @media SM
+        display block
+        position absolute
+        left 0
+        top 0
+        height 100%
+        padding-left 200px
+        z-index 1
+      ul
+        display table
+        width 100%
+        height 100%
+      > ul > li
+        display table-cell
+        vertical-align middle
+        @media SM
+          &.menu-lead-item:hover
+            > a
+              line-height 1.5
+              border-bottom 2px solid $yellow
+          &:hover
+            .m_menu-dropdown
+              display block !important
+        @media MD
+          padding 0 10px
+        a
+          display inline-block
+          vertical-align middle
+          line-height 1
+          border-bottom 1px solid rgba(0,0,0,.3)
+          @media MD
+            font-size 18px
+        &.menu-lead-item
+          > a
+            color #000
+            &:hover
+              line-height 1.5
+              border-bottom 2px solid $yellow
+    .menu-lead-item-search
+      display none !important
+      @media MD
+        display table-cell !important
+        line-height 120px
+      .search
+        form
+          position relative
+          display inline-block
+          vertical-align middle
+          width auto
+        input
+          anim()
+          border 1px solid $yellow
+          border-radius $radius
+          height 40px
+          padding-left 15px
+          padding-right 40px
+          @media LG
+            width 330px
+          &:focus
+            border-color $red
+        button
+          position absolute
+          right 3px
+          top 50%
+          width 40px
+          height 38px
+          margin-top -19px
+          border none
+          background #fff
+          &:after
+            content ''
+            background: url('../images/sprite.png') no-repeat -450px 0;
+            width: 16px;
+            height: 16px;
+            position absolute
+            left 50%
+            top 50%
+            margin-left -8px
+            margin-top -8px
+          &:hover
+            &:after
+              background-position -450px -50px
+    .menu
+      display none
+      @media SM
+        display block
+        position absolute
+        left 0
+        top 0
+        width 100%
+        height 100%
+        padding-right 200px
+        padding-left 200px
+        text-align center
+      @media MD
+        padding-right 250px
+        padding-left 200px
+      @media LG
+        padding-right 300px
+      ul
+        display table
+        width 100%
+        height 100%
+      > ul > li
+        display table-cell
+        vertical-align middle
+        @media SM
+          &.menu-lead-item:hover
+            > a
+              line-height 1.5
+              border-bottom 2px solid $yellow
+          &.menu-lead-item:first-child:hover
+            > a
+              line-height 40px
+              border-bottom none
+          &:hover
+            .m_menu-dropdown
+              display block !important
+        @media MD
+          padding 0 10px
+        a
+          display inline-block
+          vertical-align middle
+          line-height 1
+          border-bottom 1px solid rgba(0,0,0,.3)
+          @media MD
+            font-size 18px
+          &.btn-modal
+            @media SM
+              border-bottom none
+              color #333
+              font-size 15px
+              height 40px
+              line-height 40px
+              position relative
+              padding-right 15px
+              padding-left 40px
+              background $yellow url("../images/catalog-menu.png") no-repeat 15px 50%
+              border-radius $radius
+              box-shadow inset 1px 2px 2px rgba(249, 166, 26, .3), 2px 3px 2px -2px rgba(249, 166, 26, .3)
+              &:hover
+                line-height 40px !important
+                border none
+                background-color $red
+                color #fff
+                background-image url("../images/catalog-menu-hover.png")
+        &.menu-lead-item
+          > a
+            color #000
+            &:hover
+              line-height 1.5
+              border-bottom 2px solid $yellow
+
+    .options
+      clearfix()
+      @media screen and (max-width: 767px)
+        position absolute
+        left 0
+        top -50px
+        height 50px
+        width 100%
+        border-bottom 1px solid $border
+      @media SM
+        position absolute
+        right 15px
+        top 0
+        height 100%
+      // float right
+      .search,
+      .compare,
+      .cart,
+      .mobile-menu,
+      .user-authorised
+        position relative
+        float right
+        width 65px
+        height 65px
+        @media screen and (max-width: 767px)
+          width 50px
+          height 50px
+        @media SM
+          margin 27px 0
+        @media MD
+          width 45px
+      .search,
+      .compare,
+      .cart,
+      .user-authorised
+        a
+          position relative
+          display block
+          size(65px)
+          @media screen and (max-width: 767px)
+            width 100%
+            height 100%
+            border-left 1px solid $border
+          @media MD
+            width 45px
+          .icon
+            position absolute
+            left 50%
+            top 50%
+            sprite()
+          .total
+            position absolute
+            right 13px
+            top 13px
+            background $yellow
+            color #fff
+            size(20px)
+            line-height 20px
+            text-align center
+            border-radius 50%
+            font-size 12px
+            @media screen and (max-width: 767px)
+              right 4px
+              top 4px
+            @media MD
+              right 5px
+      .mobile-menu
+        @media screen and (max-width: 767px)
+          float left
+          background $yellow
+        @media SM
+          display none
+      .user-authorised
+        @media LG
+          width auto
+          margin-left 15px
+          margin-right 15px
+        a
+          @media LG
+            width auto
+            height 40px
+            anim()
+            display block
+            width auto
+            background #fff
+            border 1px solid $yellow
+            border-radius $radius
+            color #333
+            padding 0 10px
+            box-shadow inset 1px 2px 2px rgba(249, 166, 26, .3), 2px 3px 2px -2px rgba(249, 166, 26, .3)
+            margin-top 15px
+            padding-left 35px
+            padding-right 15px
+            font-size 15px
+            &:hover
+              background $yellow
+              .icon
+                background-position -150px -450px !important
+          .icon
+            margin-top -6.5px
+            margin-left -8px
+            width 13px
+            height 16px
+            background-position -150px -450px
+            @media LG
+              left 15px
+              margin-left 0
+              margin-top -8px
+          .label
+            display none
+            @media LG
+              display inline-block
+              vertical-align middle
+              line-height 40px
+          &.open,
+          &:hover
+            .icon
+              background-position -200px -450px
+      .search
+        a
+          .icon
+            margin-top -8px
+            margin-left -8px
+            width 16px
+            height 16px
+            background-position -450px 0px
+          &.open,
+          &:hover
+            .icon
+              background-position -450px -50px
+      .compare
+        a
+          .icon
+            margin-top -10px
+            margin-left -9px
+            width 18px
+            height 20px
+            background-position -400px -50px
+          &:hover
+            .icon
+              background-position -350px -50px
+      .cart
+        @media MD
+          width auto
+        .total-sum
+          display none
+          @media MD
+            bold()
+            color #555
+            font-size 14px
+            display inline-block
+            vertical-align middle
+            cursor default
+        a
+          @media MD
+            width 40px
+            display inline-block
+            vertical-align middle
+          .icon
+            margin-top -10px
+            margin-left -10px
+            size(20px)
+            background-position -300px -50px
+            @media MD
+              left 20px
+          &.open,
+          &:hover
+            .icon
+              background-position -250px -50px
+            .label
+              color $blue
+          .total
+            @media MD
+              right auto
+              left 20px
+          .label
+            display none

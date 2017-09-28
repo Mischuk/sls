@@ -1,0 +1,57 @@
+header.m_header
+  .top-header
+    .wrapper
+      //- Меню верхнее
+      .menu
+        ul
+          li: a(href="#") О компании
+          li: a(href="#") Условия оплаты
+          li: a(href="#") Доставка
+          li: a(href="#") Вопрос-ответ
+          li: a(href="#") Отзывы
+          li: a(href="#") Контакты
+      .callback: a(class="call-popup" href="#popup-callback") Заказать звонок
+      .tel: a(href="tel:+88002000600") 8 800 2000 600
+  .bottom-header
+    .wrapper
+      .logo: a(href="#")
+      //- Каталог
+      //- .menu-catalog
+        ul
+          li.menu-lead-item: a(class="btn-modal" href="#modal-catalog") Каталог
+      //- Поиск
+
+      //- Меню нижнее
+      .menu
+        ul
+          li.menu-lead-item: a(class="btn-modal" href="#modal-catalog") Каталог
+          li(class="menu-lead-item-search")
+            .search
+              form
+                input(type="text" placeholder="Введите название товара")
+                button(type="submit")
+          li.menu-lead-item: a(href="#") Акции
+          li.menu-lead-item: a(href="#") Услуги
+      .options
+        //- Мобильное меню
+        .mobile-menu
+          .mobile-menu-trigger: span
+        //- Корзина
+        .cart(title="Корзина")
+          a(href="#")
+            span.icon
+            span.total 1
+            span.label Корзина
+          .total-sum 6 299.10
+        //- Вход
+        .user-authorised
+          a(class="btn-modal" href="#popup-login")
+            span.icon
+            span.label Вход
+        //- Сравнение товаров
+        .compare(title="Сравнение товаров")
+          a(href="#")
+            span.icon
+            span.total 12
+  include ../menu-phone/m_menu-phone
+  include ../header-cart/m_header-cart

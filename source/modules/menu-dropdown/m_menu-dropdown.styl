@@ -1,0 +1,51 @@
+.m_menu-dropdown
+  clearfix()
+  position relative
+  width 100%
+  z-index 100
+  .column
+    float left
+    width 37%
+    padding-right 50px
+    &:last-child
+      width 26%
+      padding-right 0
+    .category
+      min-height 40px
+      .title
+        text-align left
+        margin 25px 0 15px
+        a
+          font-size 15px
+          text-transform uppercase
+          bold()
+          color #000
+          border-bottom 1px solid rgba(0,0,0,.2)
+          &:hover
+            border-color transparent
+            color $red
+      ul
+        display block
+        text-align left
+        cursor default
+        li
+          display inline-block
+          vertical-align middle
+          padding-right 10px
+          padding-left 0
+          padding-bottom 10px
+          a
+            color #000
+            border-bottom 1px solid rgba(0,0,0,.2)
+            font-size 14px
+            &:hover
+              color $red
+              border-color transparent
+  .recommended
+    text-align left
+    max-width 270px
+    .title
+      margin 25px 0 15px
+      font-size 18px
+      futuris()
+      text-transform uppercase

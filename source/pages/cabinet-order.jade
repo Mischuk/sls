@@ -1,0 +1,151 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Список заказов
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Личный кабинет
+    .page-heading
+      h2 Мои заказы
+    .main
+      section.content
+        .m_cabinet
+          .cabinet-nav
+            a(class="btn btn-green" href="#") Список заказов
+            a(class="btn btn-green" href="#") Мои данные
+            a(class="btn btn-green" href="#") Отложенные товары
+          .orders-list
+            table
+              tr
+                th номер заказа
+                th дата заказа
+                th товары
+                th стоимость заказа
+                th статус
+                th
+              tr
+                td
+                  .item-id
+                    span Номер заказа:
+                    | ID147855425
+                td
+                  .date
+                    span Дата заказа:
+                    | 17 апреля 2017
+                td
+                  .list
+                    .item
+                      .image: a(href="#"): img(src="images/content/item/1.png" alt="")
+                      .title
+                        a(href="#") Название товара
+                        span х 4
+                    .item
+                      .image: a(href="#"): img(src="images/content/item/1.png" alt="")
+                      .title
+                        a(href="#") Название товара
+                        span х 4
+                td
+                  .sum 11 000 руб.
+                td
+                  .status
+                    span.status-paid Оплачен
+                td
+                  .action
+                    a(href="#") Повторить заказ
+              tr
+                td
+                  .item-id
+                    span Номер заказа:
+                    | ID147855425
+                td
+                  .date
+                    span Дата заказа:
+                    | 17 апреля 2017
+                td
+                  .list
+                    .item
+                      .image: a(href="#"): img(src="images/content/item/1.png" alt="")
+                      .title
+                        a(href="#") Название товара
+                        span х 4
+                    .item
+                      .image: a(href="#"): img(src="images/content/item/1.png" alt="")
+                      .title
+                        a(href="#") Название товара
+                        span х 4
+                    .item
+                      .image: a(href="#"): img(src="images/content/item/1.png" alt="")
+                      .title
+                        a(href="#") Название товара
+                        span х 4
+                    .item
+                      .image: a(href="#"): img(src="images/content/item/1.png" alt="")
+                      .title
+                        a(href="#") Название товара
+                        span х 4
+                td
+                  .sum 11 000 руб.
+                td
+                  .status
+                    span.status-issued Оформлен
+                td
+                  .action
+                    a(href="#") Повторить заказ
+              tr
+                td
+                  .item-id
+                    span Номер заказа:
+                    | ID147855425
+                td
+                  .date
+                    span Дата заказа:
+                    | 17 апреля 2017
+                td
+                  .list
+                    .item
+                      .image: a(href="#"): img(src="images/content/item/1.png" alt="")
+                      .title
+                        a(href="#") Название товара
+                        span х 4
+                td
+                  .sum 11 000 руб.
+                td
+                  .status
+                    span.status-rejected Отклонен
+                td
+                  .action
+                    a(href="#") Повторить заказ
+              tr
+                td
+                  .item-id
+                    span Номер заказа:
+                    | ID147855425
+                td
+                  .date
+                    span Дата заказа:
+                    | 17 апреля 2017
+                td
+                  .list
+                    .item
+                      .image: a(href="#"): img(src="images/content/item/1.png" alt="")
+                      .title
+                        a(href="#") Название товара
+                        span х 4
+                    .item
+                      .image: a(href="#"): img(src="images/content/item/1.png" alt="")
+                      .title
+                        a(href="#") Название товара
+                        span х 4
+                td
+                  .sum 11 000 руб.
+                td
+                  .status
+                    span.status-made Выполнен
+                td
+                  .action
+                    a(href="#") Повторить заказ
+

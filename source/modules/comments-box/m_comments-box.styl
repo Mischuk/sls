@@ -1,0 +1,35 @@
+.m_comments-box
+  position relative
+  border-bottom 1px solid #c8c8c8
+  padding-bottom 20px
+  margin-bottom 20px
+  margin-top 20px
+  @media MD
+    padding-bottom 35px
+    margin-bottom 35px
+  @media LG
+    margin-bottom 20px
+  .action
+    margin-top 15px
+    a
+      anim()
+      position relative
+      display inline-block
+      vertical-align middle
+      padding 10px 30px
+      background $yellow
+      font-size 15px
+      roman()
+      color #222
+      border-radius $radius
+      span
+        display inline-block
+        vertical-align middle
+        line-height 1
+        border-bottom 1px dashed $blue
+      &:hover
+        background $red
+        color #fff
+  .desc
+    color #555555
+    font-size 14px

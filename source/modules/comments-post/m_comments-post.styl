@@ -1,0 +1,164 @@
+.m_comments-post
+  background #fff
+  box-shadow 1px 1px 4px rgba(0,0,0,.3)
+  border-radius $radius
+  overflow hidden
+  margin-bottom 30px
+  @media LG
+    margin-bottom 60px
+  .title
+    futuris()
+    text-transform uppercase
+    font-size 16px
+    margin-bottom 20px
+    padding 20px
+    color #222
+    background url("../images/yellow_pattern.jpg") repeat 0 0
+    @media SM
+      font-size 21px
+    @media MD
+      padding 30px
+  form
+    padding 0 20px
+    padding-bottom 20px
+    @media MD
+      padding 10px 30px
+      padding-bottom 30px
+  .conditions
+    margin-top 25px
+    label
+      sn()
+      position relative
+      display inline-block
+      vertical-align middle
+      padding-left 25px
+      cursor pointer
+      input[type="checkbox"]
+        display none
+      input[type="checkbox"]:checked + .icon
+        background $red
+        border-color $red
+        &:after
+          opacity 1
+          transform scale(1)
+      input[type="checkbox"]:checked + .icon + .label
+        color #000
+      .icon
+        anim()
+        position absolute
+        left 0
+        top 0px
+        size(20px)
+        border 1px solid #d1d9da
+        border-radius $radius
+        background #fff
+        &:after
+          anim()
+          content ''
+          sprite()
+          width 11px
+          height 8px
+          position absolute
+          left 50%
+          top 50%
+          margin-left -5.5px
+          margin-top -4px
+          background-position -350px 0
+          opacity 0
+          transform scale(0)
+      .label
+        display inline-block
+        vertical-align middle
+        color #222222
+        font-size 12px
+        line-height 18px
+        font-style normal
+        a
+          color $red
+          &:hover
+            text-decoration underline
+  .form-row
+    @media MD
+      width 50%
+      &.full
+        width 100%
+    & + .form-row
+      margin-top 20px
+    textarea,
+    input
+      background #fff
+      anim()
+      roman()
+      border 1px solid $border
+      border-left none
+      border-right none
+      border-top none
+      background #fff
+      font-size 16px
+      width 100%
+      &:focus
+        font-weight normal
+        border-color $red
+    input
+      height 40px
+    textarea
+      resize none
+    .captcha
+      .c-title
+        color #222
+      .row
+        margin-top 10px
+        overflow hidden
+        .image, .refresh
+          display inline-block
+          vertical-align middle
+        .image
+          width 140px
+          height 40px
+          background #fff
+          border-radius $radius
+          border 1px solid $border
+        .refresh
+          line-height 40px
+          font-size 14px
+          margin-left 5px
+          a
+            anim()
+            color $red
+            border-bottom 1px dashed $red
+            display inline-block
+            vertical-align middle
+            line-height 1
+            &:hover
+              color #222
+              border-color transparent
+    .submit
+      anim()
+      position relative
+      display inline-block
+      vertical-align middle
+      padding 15px 30px
+      background $yellow
+      font-size 15px
+      color #222
+      roman()
+      border-radius $radius
+      border none
+      @media MD
+        padding 15px 40px
+      &:hover
+        color #fff
+        background $red
+    .reset
+      margin-left 15px
+      anim()
+      color $blue
+      border none
+      border-bottom 1px dashed $blue
+      display inline-block
+      vertical-align middle
+      line-height 1
+      background none
+      &:hover
+        color #000
+        border-color transparent

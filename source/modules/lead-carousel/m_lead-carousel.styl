@@ -1,0 +1,137 @@
+.m_lead-carousel
+  height 350px
+  overflow hidden
+  position relative
+  margin-left -15px
+  margin-right -15px
+  @media LG
+    margin-left 0
+    margin-right 0
+  .lead-carousel
+    position relative
+    height 350px
+    .slick-arrow
+      position absolute
+      top 50%
+      width 24px
+      height 120px
+      margin-top -60px
+      sprite()
+      background-color transparent
+      border none
+      z-index 1
+      text-indent -9999px
+      opacity .5
+      display none !important
+      &:hover
+        opacity 1
+      &.slick-prev
+        left 10px
+        background-position -50px -250px
+        @media screen and (min-width: 1400px)
+          left 50%
+          margin-left -652px
+      &.slick-next
+        right 10px
+        background-position -100px -250px
+        @media screen and (min-width: 1400px)
+          right 50%
+          margin-right -652px
+    .slick-dots
+      position absolute
+      left 0
+      bottom 20px
+      width 100%
+      text-align center
+      display none !important
+      @media XS
+        display block !important
+      li
+        display inline-block
+        vertical-align middle
+        margin-left 7px
+        margin-right 7px
+        button
+          width 16px
+          height 16px
+          border-radius 50%
+          text-indent -9999px
+          background none
+          border 2px solid $yellow
+        &.slick-active button
+          position relative
+          border-color $yellow
+          background $yellow
+  .slide
+    position relative
+    height 350px
+    .image
+      position absolute
+      left 0
+      top 0
+      width 100%
+      height 100%
+      background-repeat no-repeat
+      background-position left center
+      background-size cover
+      @media SM
+        background-position 50%
+    .text
+      position relative
+      z-index 10
+      height 100%
+      text-align center
+      padding 0 40px
+      @media SM
+        text-align left
+        padding-right 50%
+        padding-left 100px
+      @media LG
+        max-width 1200px
+        margin 0 auto
+        padding-right 40%
+      @media screen and (min-width: 1400px)
+        padding-left 15px
+      h1
+        font-weight 900
+        font-size 32px
+        line-height 1
+        margin-bottom 20px
+        color #fff
+        span
+          color #fff
+      p
+        color #fff
+        font-size 16px
+        line-height 1.5
+        margin-bottom 0
+        @media XS
+          font-size 18px
+      .action
+        margin-top 10px
+        a
+          anim()
+          display inline-block
+          border 1px solid #fff
+          border-radius $radius
+          background none
+          color #fff
+          height 40px
+          line-height 38px
+          padding 0 20px
+          box-shadow none
+          &:hover
+            color #333
+            background $yellow
+            border-color $yellow
+            i
+              background-position -150px -25px
+
+          i
+            display inline-block
+            vertical-align middle
+            background: url('../images/sprite.png') no-repeat -150px 0px;
+            width: 12px;
+            height: 12px;
+            margin-top -2px
+            margin-left 2px

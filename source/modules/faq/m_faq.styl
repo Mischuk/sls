@@ -1,0 +1,49 @@
+.m_faq
+  position relative
+  border 1px solid #eeefef
+  margin-bottom 30px
+  &:last-child
+    margin-bottom 0
+  .item
+    background #ffffff
+    user-select-none()
+    & + .item
+      border-top 1px solid #dcdcdc
+    &.open
+      background #fff8e7
+      .header
+        span
+          color #000
+          border-color transparent
+      .body
+        display block
+    .header
+      padding 25px 30px
+      cursor pointer
+      @media screen and (min-width: 640px)
+        position relative
+        padding-left 70px
+      &:after
+        @media screen and (min-width: 640px)
+          content ''
+          background: url('../images/sprite.png') no-repeat -300px -300px;
+          width: 32px;
+          height: 32px;
+          position absolute
+          left 21px
+          top 21px
+      span
+        font-size 18px
+        color #222
+        bold()
+      &:hover
+        span
+          border-color transparent
+    .body
+      padding 0px 30px
+      padding-bottom 30px
+      background #fff8e7
+      color #555
+      font-size 14px
+      line-height 22px
+      display none

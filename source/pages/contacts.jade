@@ -1,0 +1,137 @@
+extends ../modules/layout/layout.jade
+
+block title
+  title Контакты
+
+block content
+  main
+    .m_breadcrumbs
+      ul
+        li: a(href="#") Главная
+        li: a(href="#") Контакты
+    .page-heading
+      h2 Контакты
+    .m_contacts
+      .contacts-info
+        .row
+          span.label Часы работы:
+          span.value Пн - Сб: с 9:00 до 20:00
+          span.value В воскресенье на Ваши вопросы отвечает дежурный менеджер.
+        .row
+          span.label Адрес:
+          span.value г. Москва, ул. Воронцовская, 20
+        .row
+          span.label Телефон:
+          span.value +7 (495) 505-49-04
+        .row
+          span.label E-mail:
+          span.value: a(href="#") mailbox@paramita.ru
+      .contacts-form
+        .title Свяжитесь с нами
+        form
+          .form-row
+            .input: input(type="text" placeholder="Имя")
+            .input: input(type="email" placeholder="Email")
+          .form-row
+            textarea(placeholder="Сообщение")
+          .form-row
+            .conditions
+              label
+                input(type="checkbox" name="cond-1" checked value="1")
+                i.icon
+                i.label Я принимаю условия <a href="#">пользовательского соглашения</a> и даю свое согласие группе компаний «СЛС» на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных <a href="#">политикой конфиденциальности</a>.
+          .form-row
+            button(class="submit" type="submit") Отправить
+      .contacts-map
+        script(src="//api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+        script.
+          ymaps.ready(function () {
+              var myMapz = new ymaps.Map('map', {
+                      center: [55.737061, 37.657143],
+                      zoom: 15,
+                      controls: ['zoomControl']
+                  }, {
+                      searchControlProvider: 'yandex#search'
+                  }),
+                  myPlacemark = new ymaps.Placemark(myMapz.getCenter(), {
+                      hintContent: 'Собственный значок метки',
+                      balloonContent: 'Это красивая метка'
+                  }, {
+                      // Опции.
+                      // Необходимо указать данный тип макета.
+                      iconLayout: 'default#image',
+                      // Своё изображение иконки метки.
+                      iconImageHref: 'images/marker-contacts.png',
+                      // Размеры метки.
+                      iconImageSize: [59, 65],
+                      // Смещение левого верхнего угла иконки относительно
+                      // её "ножки" (точки привязки).
+                      iconImageOffset: [-20, -50]
+                  });
+
+              myMapz.geoObjects.add(myPlacemark);
+              myMapz.behaviors.disable('scrollZoom');
+          });
+        #map
+      .contacts-map
+        script.
+          ymaps.ready(init);
+
+          function init () {
+              var myMap = new ymaps.Map('map-multiple', {
+                      center: [55.831903, 37.411961],
+                      zoom: 16,
+                      controls: ['zoomControl']
+                  }, {
+                      searchControlProvider: 'yandex#search'
+                  }),
+                  objectManager = new ymaps.ObjectManager({
+                      // Чтобы метки начали кластеризоваться, выставляем опцию.
+                      clusterize: false,
+                      // ObjectManager принимает те же опции, что и кластеризатор.
+                      gridSize: 32,
+                      clusterDisableClickZoom: true
+                  });
+
+              // Чтобы задать опции одиночным объектам и кластерам,
+              // обратимся к дочерним коллекциям ObjectManager.
+              objectManager.objects.options.set({
+                iconLayout: 'default#image',
+                iconImageHref: 'images/marker-contacts.png',
+                iconImageSize: [59, 65],
+                iconImageOffset: [-29, -40]
+              });
+              objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+              myMap.geoObjects.add(objectManager);
+              myMap.behaviors.disable('scrollZoom');
+
+              $.ajax({
+                  url: "data.json"
+              }).done(function(data) {
+                  objectManager.add(data);
+              });
+
+              $('.contacts-delivery li span').on('click', function(){
+                var x = +($(this).attr('data-pos-x'));
+                var y = +($(this).attr('data-pos-y'));
+                myMap.setCenter([x, y]);
+                $('.contacts-delivery li').removeClass('current');
+                $(this).parent().addClass('current');
+              });
+
+          }
+        .page-heading
+          h2 Точки выдачи товара
+        .contacts-delivery.delivery-self-list.ps-container.ps-theme-default.ps-active-y
+          ul
+            li <span data-pos-x="55.831903" data-pos-y="37.411961" class="address">Комендантский проспект, д. 33, корп. 1, ТЦ "Курень"</span>
+            li <span data-pos-x="55.763338" data-pos-y="37.565466" class="address">Комендантский проспект, д. 34, корп. 2, ТЦ "Курень"</span>
+            li <span data-pos-x="55.763338" data-pos-y="37.565466" class="address">Комендантский проспект, д. 35, корп. 3, ТЦ "Курень"</span>
+            li <span data-pos-x="55.744522" data-pos-y="37.616378" class="address">Комендантский проспект, д. 36, корп. 4, ТЦ "Курень"</span>
+            li <span data-pos-x="55.780898" data-pos-y="37.642889" class="address">Комендантский проспект, д. 37, корп. 5, ТЦ "Курень"</span>
+            li <span data-pos-x="55.793559" data-pos-y="37.435983" class="address">Комендантский проспект, д. 38, корп. 6, ТЦ "Курень"</span>
+            li <span data-pos-x="55.800584" data-pos-y="37.675638" class="address">Комендантский проспект, д. 39, корп. 7, ТЦ "Курень"</span>
+            li <span data-pos-x="55.716733" data-pos-y="37.589988" class="address">Комендантский проспект, д. 40, корп. 8, ТЦ "Курень"</span>
+            li <span data-pos-x="55.775724" data-pos-y="37.560840" class="address">Комендантский проспект, д. 41, корп. 9, ТЦ "Курень"</span>
+            li <span data-pos-x="55.822144" data-pos-y="37.433781" class="address">Комендантский проспект, д. 42, корп. 1, ТЦ "Курень"</span>
+        #map-multiple

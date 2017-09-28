@@ -1,0 +1,236 @@
+.background-layer
+  trs(background)
+  left 0
+  top 0
+  width 100%
+  height 100%
+  background rgba(37, 37, 37, 0)
+  z-index 500
+  &.active
+    position fixed
+    background rgba(37, 37, 37, .6)
+    @media SM
+      position static
+.mfp-bg
+  background rgba(37, 37, 37, .6)
+.mfp-close
+  text-indent -9999px !important
+  font-size 0 !important
+  opacity 1
+  &:after
+    content ''
+    sprite()
+    size(10px)
+    position absolute
+    left 50%
+    top 50%
+    margin-left -5px
+    margin-top -5px
+    background-position 0 0
+  &:hover
+    &:after
+      background-position -50px 0
+.mfp-gallery
+  .mfp-close
+    right 0
+    padding-right 0
+    cursor pointer !important
+    &:after
+      left auto
+      right 0
+  .mfp-arrow
+    opacity 1
+    width 24px
+    height 120px
+    margin-top -60px
+    &:after, &:before
+      display none
+  .mfp-arrow-left
+    sprite()
+    background-position -50px -250px
+    left 10px
+  .mfp-arrow-right
+    sprite()
+    right 10px
+    background-position -100px -250px
+.popup
+  max-width 530px
+  background #fff
+  margin 20px auto
+  padding 30px 15px
+  text-align left
+  @media SM
+    padding 30px 40px
+  h2
+    futuris()
+    font-size 24px
+    margin-bottom 15px
+    @media SM
+      font-size 32px
+  p
+    font-size 15px
+    color #555555
+  form
+    @media SM
+      padding-top 20px
+    .form-row
+      & + .form-row
+        margin-top 15px
+    input, textarea
+      anim()
+      roman()
+      width 100%
+      padding 0
+      border none
+      border-bottom 1px solid $border
+      background #fff
+      &:focus
+        border-color $red
+    textarea
+      line-height 1.2
+      resize none
+      height auto
+      vertical-align middle
+      padding-top 10px
+      padding-bottom 10px
+      height 40px
+    input
+      height 40px
+    button
+      anim()
+      width auto
+      padding-left 50px
+      padding-right 50px
+      background $yellow
+      color #333
+      border none
+      line-height 50px
+      height 50px
+      border-radius $radius
+      margin-top 15px
+      &:hover
+        background $red
+        color #fff
+    .socials
+      span, ul, li
+        display inline-block
+        vertical-align middle
+        cursor default
+      span
+        font-size 15px
+        margin-right 10px
+      a
+        anim()
+        display block
+        width 24px
+        height 24px
+        background-image url("../images/socials.png")
+        background-repeat no-repeat
+        &.vk
+          background-position 0 0
+        &.fb
+          background-position -28px 0
+        &.tt
+          background-position -56px 0
+        &:hover
+          opacity .8
+    .conditions
+      margin-top 25px
+      label
+        sn()
+        position relative
+        display inline-block
+        vertical-align middle
+        padding-left 25px
+        cursor pointer
+        input[type="checkbox"]
+          display none
+        input[type="checkbox"]:checked + .icon
+          background $red
+          border-color $red
+          &:after
+            opacity 1
+            transform scale(1)
+        input[type="checkbox"]:checked + .icon + .label
+          color #000
+        .icon
+          anim()
+          position absolute
+          left 0
+          top 0px
+          size(20px)
+          border 1px solid #d1d9da
+          border-radius $radius
+          background #fff
+          &:after
+            anim()
+            content ''
+            sprite()
+            width 11px
+            height 8px
+            position absolute
+            left 50%
+            top 50%
+            margin-left -5.5px
+            margin-top -4px
+            background-position -350px 0
+            opacity 0
+            transform scale(0)
+        .label
+          display inline-block
+          vertical-align middle
+          color #222222
+          font-size 12px
+          line-height 18px
+          font-style normal
+          a
+            color $red
+            &:hover
+              text-decoration underline
+
+#popup-success
+  h2
+    futuris()
+    text-transform none
+    font-weight normal
+    margin-bottom 0
+#popup-fast
+  padding 0
+  form
+    padding 30px 15px
+    @media SM
+      padding 30px 60px
+    button
+      position relative
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -450px -100px;
+        width: 12px;
+        height: 16px;
+        position absolute
+        left 20px
+        top 50%
+        margin-top -8px
+      &:hover
+        &:after
+          background-position -478px -100px
+  .m_header-cart
+    position relative
+    left 0
+    margin-left 0
+    max-width none
+    box-shadow none
+    padding 15px 15px
+    @media SM
+      padding 30px 60px
+    h2
+      text-align left
+      @media SM
+        padding-top 20px
+        padding-bottom 0
+    .total-items
+      .item
+        @media SM
+          padding 10px 0
+#modal-catalog
+  max-width 1170px

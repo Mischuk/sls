@@ -1,0 +1,32 @@
+.m_breadcrumbs
+  padding 15px 0
+  ul
+    cursor default
+  li
+    position relative
+    display inline-block
+    vertical-align middle
+    & + li
+      padding-left 20px
+      &:after
+        content ''
+        background: url('../images/sprite.png') no-repeat -300px 0;
+        width: 7px;
+        height: 4px;
+        position absolute
+        left 4px
+        top 50%
+        margin-top -2px
+        transform rotate(90deg)
+    a
+      color #555555
+      text-decoration underline
+      font-size 14px
+      &:hover
+        color #000
+        text-decoration none
+    &:last-child
+      a
+        text-decoration none
+        cursor default
+        color #555555

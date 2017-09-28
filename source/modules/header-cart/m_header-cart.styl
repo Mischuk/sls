@@ -1,0 +1,118 @@
+.m_header-cart
+  anim()
+  position absolute
+  left 0
+  top -500%
+  width 100%
+  background #fff
+  &.open
+    top 100%
+  @media SM
+    max-width 430px
+    left auto
+    right 0
+    box-shadow 0 6px 16px rgba(0,0,0,.1)
+  @media LG
+    right 50%
+    margin-right -585px
+  .total-items
+    .item
+      border-top 1px solid #eeefef
+      padding 20px 10px
+      @media XS
+        clearfix()
+      @media SM
+        padding 30px
+        border-top none
+        & + .item
+          border-top 1px solid #eeefef
+      .image
+        width 100%
+        @media XS
+          float left
+          width 25%
+          width 100px
+          height 100px
+          border 1px solid $border
+          line-height 78px
+          padding 10px
+        a, img
+          display block
+          @media XS
+            display inline-block
+            vertical-align middle
+        img
+          width 100%
+      .desc
+        padding-top 5px
+        @media XS
+          float left
+          max-width 75%
+          padding-top 0
+          padding-left 10px
+        @media SM
+          max-width 270px
+        .title a
+          color #000
+          bold()
+          &:hover
+            color $red
+        .details
+          clearfix()
+          padding-top 10px
+          color #000
+          font-size 14px
+          @media XS
+            max-width 260px
+          .amt
+            float left
+          .sum
+            float right
+          .sum, .sum-value
+            position relative
+            padding-right 10px
+            &:after
+              content ' руб.'
+  .total-sum
+    padding 15px 5px
+    text-align center
+    background #fff8e7
+    border 1px solid #f2ebdb
+    .label
+      color #000
+      bold()
+    .sum
+      position relative
+      bold()
+      font-size 20px
+      padding-right 15px
+      &:after
+        content ' руб.'
+  .action
+    background #fff
+    padding 30px 0
+    text-align center
+    a
+      anim()
+      position relative
+      display inline-block
+      vertical-align middle
+      padding 20px 60px
+      background $yellow
+      font-size 16px
+      color #000
+      border-radius $radius
+      box-shadow inset 1px 2px 2px rgba(249, 166, 26, .3), 2px 3px 2px -2px rgba(249, 166, 26, .3)
+      .icon-details
+        display inline-block
+        vertical-align middle
+        background: url('../images/sprite.png') no-repeat -150px -100px;
+        width: 16px;
+        height: 16px;
+        margin-right 5px
+      &:hover
+        background $red
+        color #fff
+        box-shadow inset 1px 2px 2px rgba(172, 34, 46, .3), 2px 3px 2px -2px rgba(172, 34, 46, .3)
+        .icon-details
+          background-position -200px -100px

@@ -1,0 +1,459 @@
+.m_cabinet
+  background #fff
+  padding 15px
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  border-radius $radius
+  overflow hidden
+  @media MD
+    padding 30px
+  .cabinet-nav
+    margin-bottom 15px
+    @media MD
+      margin-bottom 30px
+    a
+      font-size 15px
+      padding 10px 20px
+      margin 5px
+      background #fff
+      box-shadow none
+      border 1px solid $yellow
+      color #222
+      border-radius $radius
+      text-transform none
+      &:after
+        display none
+      &:hover,
+      &.current
+        background $yellow
+        box-shadow none
+  .orders-list
+    &.deffered
+      td
+        @media screen and (max-width: 992px)
+          &:nth-child(1)
+            float left
+            width 75%
+          &:nth-child(2),
+          &:nth-child(3)
+            float right
+            max-width 25%
+            width auto
+            .status
+              padding-top 3px
+            .sum
+              width auto
+          &:nth-child(4)
+            float left
+            width 50%
+          &:nth-child(5)
+            float right
+            width 50%
+            text-align right
+        @media screen and (max-width: 420px)
+          &:nth-child(1)
+            width 100%
+          &:nth-child(2),
+          &:nth-child(3)
+            width 50%
+            max-width 50%
+            margin-bottom 15px
+          &:nth-child(2)
+              text-align right
+    table
+      text-align left
+      @media screen and (max-width: 768px)
+        width 100%
+      th,
+      td
+        box-shadow none
+        border none
+        padding 15px
+      th
+        color #555555
+        font-size 12px
+        font-weight normal
+        background #fff
+        text-transform uppercase
+      td
+        background none
+        vertical-align top
+        @media screen and (max-width: 992px)
+          display block
+          padding 0
+          &:nth-child(1)
+            float left
+            width 50%
+          &:nth-child(2)
+            float left
+            width 50%
+            text-align right
+          &:nth-child(3)
+            float left
+            width 100%
+          &:nth-child(4),
+          &:nth-child(5)
+            float left
+          &:nth-child(6)
+            float right
+            text-align right
+        @media screen and (max-width: 420px)
+          &:nth-child(1),
+          &:nth-child(2)
+            width 100%
+            text-align left
+        @media screen and (max-width: 380px)
+          &:nth-child(6)
+            width 100%
+            float left
+            text-align left
+            margin-top 15px
+
+      tr
+        border-bottom 1px solid #ebebeb
+        @media screen and (max-width: 992px)
+          clearfix()
+          display block
+          position relative
+          padding-top 10px
+          padding-bottom 10px
+          min-height 125px
+        @media screen and (max-width: 400px)
+          padding-left 0
+        &:first-child
+          background url("../images/red_pattern.jpg") repeat 0 0
+          @media screen and (max-width: 992px)
+            display none
+          th
+            background none
+            color #fff
+
+      .title
+        a
+          anim()
+          bold()
+          color #222
+          font-size 15px
+          text-transform uppercase
+          text-decoration underline
+          &:hover
+            color $red
+            text-decoration none
+      .sum
+        bold()
+        font-size 15px
+        width 120px
+        @media screen and (max-width: 992px)
+          padding 1.5px 0
+      .item-id,
+      .date
+        font-size 14px
+        @media screen and (max-width: 992px)
+          margin-bottom 15px
+        span
+          display none
+          @media screen and (max-width: 992px)
+            display inline
+      .list
+        @media screen and (max-width: 992px)
+          margin-bottom 15px
+        .item + .item
+          margin-top 10px
+        .title,
+        .image
+          display inline-block
+          vertical-align middle
+        .title
+          color #555555
+          font-size 14px
+          max-width 100%
+        .image
+          width 40px
+          height 40px
+          line-height 36px
+          border 1px solid #dcdcdc
+          text-align center
+          overflow hidden
+          img
+            display inline-block
+            vertical-align middle
+            max-width 96%
+            max-height 96%
+      .status
+        font-size 15px
+        line-height 24px
+        span
+          color #fff
+          display inline-block
+          vertical-align middle
+          padding 5px
+          border-radius $radius
+          &.yes
+            color #408f24
+            padding-left 0
+          &.no
+            color #999999
+            padding-left 0
+          &.status-paid
+            background #00a1c4
+          &.status-issued
+            background $yellow
+          &.status-rejected
+            background $red
+          &.status-made
+            background #4d9500
+      .action
+        max-width 120px
+        text-align center
+        @media screen and (max-width: 992px)
+          margin-top -5px
+        a
+          anim()
+          border 1px solid $yellow
+          border-radius $radius
+          color #222
+          font-size 15px
+          line-height 1
+          display inline-block
+          vertical-align middle
+          padding 13px 20px
+          text-align center
+          &:hover
+            background $yellow
+      .buy
+        margin-top -7px
+        a
+          transition none
+          display block
+          width 100%
+          height 100%
+          background $yellow
+          position relative
+          padding 10px 20px
+          padding-left 30px
+          max-width 125px
+          text-align center
+          &:after
+            transition none
+            content ''
+            background: url('../images/sprite.png') no-repeat -150px -100px;
+            width: 16px;
+            height: 16px;
+            position absolute
+            left 25px
+            top 50%
+            margin-left -(@width/2)
+            margin-top -(@height/2)
+          &:hover
+            background #b70b1a
+            color #fff
+            &:after
+              background-position -200px -100px
+      .count
+        height 25px
+        width 130px
+        .total-items
+          font-size 0
+          input, button
+            float left
+          .qty
+            width 35px
+            height 35px
+            margin 5px 0
+            text-align center
+            font-size 16px
+            color #555555
+            background #fff
+            border-radius $radius
+            border none
+          .qtyminus,
+          .qtyplus
+            width 35px
+            height 45px
+            color #555
+            background none
+            border none
+            color #999999
+            font-weight bold
+            font-size 0
+            text-indent -9999px
+            position relative
+            &:after
+              content ''
+              background-image: url('../images/sprite.png');
+              background-repeat no-repeat
+              width: 16px;
+              height: 2px;
+              position absolute
+              left 50%
+              top 50%
+              margin-left -8px
+              margin-top -1px
+          .qtyminus
+            &:after
+              background-position -250px -100px
+            &:hover:after
+              background-position -300px -100px
+          .qtyplus
+            &:after
+              height 16px
+              margin-top -8px
+              background-position -350px -100px
+            &:hover:after
+              background-position -400px -100px
+  .cabinet-data
+    clearfix()
+    .user-personal,
+    .user-global
+      border 1px solid #ebebeb
+      background #fafafa
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+      padding 15px
+      @media SM
+        float left
+        width 49%
+      @media MD
+        padding 30px
+    .user-personal
+      @media SM
+        margin-right 2%
+      form
+        & + form
+          padding-top 45px
+        .form-row
+          & + .form-row
+            margin-top 15px
+        .set-lead
+          padding-top 5px
+          a
+            font-size 12px
+            color $red
+            anim()
+            &:hover
+              color #000
+        label
+          display block
+          width 100%
+          span.label
+            display block
+            font-size 12px
+            line-height 1
+            color #555555
+          input[type="text"],
+          input[type="tel"],
+          input[type="email"],
+          input[type="password"]
+            border none
+            border-bottom 1px solid #d2d2d2
+            width 100%
+            background none
+            font-size 16px
+            roman()
+            padding 10px 0
+            &:focus
+              border-color $red
+          i.label
+            font-size 12px
+            color #555555
+        button[type="submit"]
+          padding 10px 30px
+          font-size 15px
+          text-transform none
+          background $yellow
+          box-shadow none
+          color #222
+          border-radius $radius
+          &:hover
+            background $red
+            color #fff
+        .rss-feed
+          label
+            user-select-none()
+            position relative
+            display inline-block
+            vertical-align middle
+            padding-left 25px
+            cursor pointer
+            input[type="checkbox"]
+              display none
+            input[type="checkbox"]:checked + .icon
+              background $red
+              border-color $red
+              &:after
+                opacity 1
+                transform scale(1)
+            input[type="checkbox"]:checked + .icon + .label
+              color #000
+            .icon
+              anim()
+              position absolute
+              left 0
+              top 50%
+              size(16px)
+              margin-top -8px
+              border 1px solid #d1d9da
+              border-radius $radius
+              background #fff
+              &:after
+                anim()
+                content ''
+                sprite()
+                width 11px
+                height 8px
+                position absolute
+                left 50%
+                top 50%
+                margin-left -5.5px
+                margin-top -4px
+                background-position -350px 0
+                opacity 0
+                transform scale(0)
+            .label
+              display inline-block
+              vertical-align middle
+              color #999999
+              font-size 12px
+              line-height 16px
+              &:hover
+                color #555
+    .user-global
+      margin-top 30px
+      font-size 15px
+      @media SM
+        margin-top 0
+      > div
+        margin-top 15px
+        &:first-child
+          margin-top 0
+      .user-name
+        font-size 20px
+      .user-rate
+        span
+          font-size 18px
+          background $red
+          color #fff
+          display inline-block
+          vertical-align middle
+          padding 5px 10px
+          border-radius 20px
+      .user-rate-up
+        background $yellow
+        color #222
+        margin-left -15px
+        margin-right -15px
+        padding 15px
+        @media MD
+          margin-left -30px
+          margin-right -30px
+          padding 15px 30px
+      .user-coupones
+        .title
+          bold()
+          margin-bottom 10px
+        ul
+          li
+            padding 5px 0
+            &.disabled
+              color #bebebe
+              text-decoration line-through
+            span
+              color $red
