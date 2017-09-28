@@ -1,8 +1,8 @@
-# Project
+# СЛС
 
 ## Demo
-Demo: [frontend.watch/project](http://frontend.watch/project)
-Download: [project-master.zip](https://github.com/Mischuk/project/archive/master.zip)
+Demo: [frontend.watch/sls](http://frontend.watch/sls)
+Download: [project-master.zip](https://github.com/Mischuk/sls/archive/master.zip)
 
 ## Description
 * Task-runner [Gulp](http://gulpjs.com/)
