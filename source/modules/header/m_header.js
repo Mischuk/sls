@@ -124,3 +124,14 @@ function headerOptions() {
 headerOptions();
 
 
+
+function headerBalloon() {
+  $('.logout').on('click', function(){
+    $(this).next().fadeIn(500);
+  });
+
+  $('.exit .balloon a:last-child').on('click', function(){
+    $(this).parent().fadeOut(500);
+  });
+}
+headerBalloon();

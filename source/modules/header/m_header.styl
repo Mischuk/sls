@@ -405,6 +405,8 @@
           width auto
           margin-left 15px
           margin-right 15px
+        .user-profile
+          display none
         a
           @media LG
             width auto
@@ -505,3 +507,120 @@
               left 20px
           .label
             display none
+  &.authorised
+    .bottom-header
+      .menu
+        @media LG
+          padding-right 400px !important
+      .menu-lead-item-search
+        @media LG
+          max-width 200px
+        .search
+          width 100%
+          form
+            width 100%
+            input
+              width 100%
+      .options
+        .user-authorised
+          > .btn-modal
+            display none
+          .user-profile
+            display block
+            width 100%
+            height 100%
+            @media LG
+              width 200px
+              height 70px
+              background #fff8e7
+              border 1px solid #f2ebdb
+              border-radius $radius
+              padding 10px
+            .user-profile-mobile
+              @media LG
+                display none
+            > .panel
+              position relative
+              display none
+              height 100%
+              width 100%
+              @media LG
+                display block
+              a
+                height auto
+                display inline-block
+                background none
+                border none
+                border-radius 0
+                padding 0
+                box-shadow none
+                margin-top 0
+              .user-name
+                a
+                  bold()
+                  font-size 15px
+                  line-height 1
+                  &:hover
+                    color $red
+              .bottom
+                position absolute
+                left 0
+                bottom 0
+                height auto
+                width 100%
+                line-height 16px
+                .cabinet
+                  line-height 16px
+                  a
+                    color $red
+                    line-height 16px
+                    font-size 14px
+                .exit
+                  position absolute
+                  right 0
+                  bottom 0
+                  > a
+                    transition none
+                    display block
+                    background: url('../images/sprite.png') no-repeat -450px -400px;
+                    width: 16px;
+                    height: 16px;
+                    &:hover
+                      background-position -484px -400px
+                  .balloon
+                    display none
+                    &.is-open
+                      display block
+                    @media LG
+                      clearfix()
+                      position absolute
+                      right -28px
+                      top -85px
+                      background #fff
+                      z-index 1
+                      width 150px
+                      padding 15px
+                      margin-top 20px
+                      box-shadow 0px 0px 3px 1px rgba(0, 0, 0, 0.2)
+                      border-radius $radius
+                      &:after
+                        content: "";
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        margin-left: -5px;
+                        top 45px
+                        right 30px
+                        box-sizing: border-box;
+                        border: 10px solid black;
+                        border-color: transparent transparent #fff #fff;
+                        transform-origin: 0 0;
+                        transform: rotate(-45deg);
+                        box-shadow: -2px 3px 3px 0px rgba(0, 0, 0, 0.1)
+                      a
+                        float left
+                        font-size 14px
+                        &:hover
+                          color $red
+                        & + a
+                          float right

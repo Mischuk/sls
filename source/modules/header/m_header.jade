@@ -1,4 +1,4 @@
-header.m_header
+header(class=user_authorised?"m_header authorised":'m_header')
   .top-header
     .wrapper
       //- Меню верхнее
@@ -48,6 +48,19 @@ header.m_header
           a(class="btn-modal" href="#popup-login")
             span.icon
             span.label Вход
+          .user-profile
+            a(class="user-profile-mobile" href="#")
+              span.icon
+            .panel
+              .user-name: a(href="#") Иванов Иван Иванович
+              .bottom
+                .cabinet: a(href="#") Личный кабинет
+                .exit
+                  a(class="logout" href="#" title="Выйти")
+                  .balloon
+                    a(href="#") Выйти
+                    a(href="#") Нет
+
         //- Сравнение товаров
         .compare(title="Сравнение товаров")
           a(href="#")
